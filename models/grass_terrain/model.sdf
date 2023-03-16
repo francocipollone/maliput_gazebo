@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="grass_terrain">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>50 50</size>
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 50</size>
+          </plane>
+        </geometry>
+        <!-- <material>
+          <ambient>0.4 0.8 0.4 1</ambient>
+          <diffuse>0.4 0.8 0.4 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material> -->
+        <!-- <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material> -->
+      <material>
+        <diffuse>0.7 0.7 0.7</diffuse>
+        <specular>0.7 0.7 0.7</specular>
+        <ambient>0.7 0.7 0.7</ambient>
+        <pbr>
+          <metal>
+            <albedo_map>model://grass_terrain/materials/grass2.jpg</albedo_map>
+          </metal>
+        </pbr>
+      </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
